@@ -6,28 +6,28 @@ exports.run = async (client, message, args, ops) => {
   
   //primeiro irei fazer as embeds de retorno do bot
   var semVoz = new Discord.RichEmbed()
-  .setTitle('Você não está conectado ao chat de voz')
+  .setTitle('Você não está dentro de um chat de voz')
   .setDescription('Conecte-se ao chat de voz para eu poder tocar as suas músicas')
   .setColor(65507)
   .addField('Bot em beta!', 'sem comando de stop **por enquanto**', true)
   .setFooter(`Copyrighted by: CdA Internet Division©|Bot from Discord© have been maked in Javascript`)
   
   var jaConectado = new Discord.RichEmbed()
-  .setTitle('O bot já está conectado a um chat de voz')
+  .setTitle('já estou conectado a um chat de voz')
   .setDescription('Espere o seu amigo parar de escutar para eu poder tocar as suas músicas')
   .setColor(65507)
   .addField('Bot em beta!', 'sem comando de stop **por enquanto**', true)
   .setFooter(`Copyrighted by: CdA Internet Division©|Bot from Discord© have been maked in Javascript`)
   
   var semUrl = new Discord.RichEmbed()
-  .setTitle('Acho que você se esqueceu de botar a url')
+  .setTitle('url nao foi especificada')
   .setDescription('Coloque uma url para eu poder tocar as suas músicas')
   .setColor(65507)
   .addField('Bot em beta!', 'sem comando de stop **por enquanto**', true)
   .setFooter(`Copyrighted by: CdA Internet Division©|Bot from Discord© have been maked in Javascript`)
   
   var Naoverificada = new Discord.RichEmbed()
-  .setTitle('Seu link não passou pela verificação!')
+  .setTitle('Seu link não é do youtube . Verificação bloqueou o acesso!')
   .setDescription('Coloque um link oficial do **youtube**')
   .setColor(65507)
   .addField('Bot em beta!', 'sem comando de stop **por enquanto**', true)
@@ -66,7 +66,7 @@ exports.run = async (client, message, args, ops) => {
   let dispatcher = await connection.playStream(ytdl(args[0], { filter: 'audioonly' }));
     
 var tocando = new Discord.RichEmbed()
-  .setTitle(`Estou tocando agora ${info.title}!`)
+  .setTitle(`Estou tocando agora sua música`)
   .setDescription('Espere a música acabar para colocar outra \n assim não ocorrerá erros')
   .setColor(65507)
   .addField('Bot em beta!', 'sem comando de stop **por enquanto**', true)
